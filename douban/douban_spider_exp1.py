@@ -48,7 +48,7 @@ class DouBanouseSpider(object):
                 next_url = next_page[0].link.attrs['href']
                 end_title = next_url.split('=')[1]
                 if int(end_title) < (self.page_num * 25):
-                    self.get_url_content(url)
+                    self.get_url_content(next_url)
         except Exception as e:
             print('抓取过程报错：%s' % e)
 
