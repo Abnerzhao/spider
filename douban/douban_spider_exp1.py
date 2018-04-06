@@ -6,7 +6,7 @@ import time
 from bs4 import BeautifulSoup
 
 
-class DouBanouseSpider(object):
+class DouBanHouseSpider(object):
 
     """
     抓取豆瓣小组房源信息
@@ -80,7 +80,7 @@ def main():
         key_word = '1号线'
     if not page_num:
         page_num = 5
-    house_spider = DouBanouseSpider(key_word, int(page_num))
+    house_spider = DouBanHouseSpider(key_word, int(page_num))
     house_spider.start_spider()
     print('豆瓣房源爬虫爬取结束...')
 
